@@ -89,7 +89,7 @@ namespace NetMud.Gossip
         /// <param name="worker">the function that actually takes in a full message from the socker</param>
         private async void ReconnectLoop(double suspendMultiplier = 1)
         {
-            if (MyClient != null && MyClient.IsAlive || suspendMultiplier > 500)
+            if (MyClient != null && MyClient.IsAlive || suspendMultiplier > ConfigSettings.SuspendMultiplierMaximum)
                 return;
 
             DoLog("Gossip Server Reconnect Loop Pulse x" + suspendMultiplier.ToString());
@@ -109,7 +109,7 @@ namespace NetMud.Gossip
 
                 await Task.Delay(Convert.ToInt32(10000 * suspendMultiplier));
 
-                ReconnectLoop(suspendMultiplier * 1.15);
+                ReconnectLoop(suspendMultiplier * ConfigSettings.SuspendMultiplier);
             }
             catch (Exception ex)
             {
