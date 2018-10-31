@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27703.2026
+VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrapeNET.Gossip", "GrapeNET.Gossip\GrapeNET.Gossip.csproj", "{D98549E9-9D8C-46A7-83B2-9A4D68504F31}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrapeNET.Gossip", "GrapeNET.Gossip\GrapeNET.Gossip.csproj", "{B6A7A388-4B94-4890-A896-DB49946B9A17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D98549E9-9D8C-46A7-83B2-9A4D68504F31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D98549E9-9D8C-46A7-83B2-9A4D68504F31}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D98549E9-9D8C-46A7-83B2-9A4D68504F31}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D98549E9-9D8C-46A7-83B2-9A4D68504F31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6A7A388-4B94-4890-A896-DB49946B9A17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6A7A388-4B94-4890-A896-DB49946B9A17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6A7A388-4B94-4890-A896-DB49946B9A17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6A7A388-4B94-4890-A896-DB49946B9A17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1C1DAC5C-D2B1-4DD4-A453-DB6ED0D7349E}
+		SolutionGuid = {BA25A528-F6C4-406F-92AB-3993DD0A0B61}
 	EndGlobalSection
 EndGlobal
