@@ -22,6 +22,9 @@ namespace NetMud.Gossip.Messaging
         [JsonProperty("client_secret")]
         public string ClientSecret { get; }
 
+        [JsonProperty("version")]
+        public string Version { get; }
+
         [JsonProperty("user_agent")]
         public string UserAgent { get; }
 
@@ -33,6 +36,7 @@ namespace NetMud.Gossip.Messaging
             Channels = config.SupportedChannels.ToArray();
             FeaturesSupported = config.SupportedFeatures.ToArray();
             UserAgent = config.UserAgent;
+            Version = config.Version;
         }
     }
 }

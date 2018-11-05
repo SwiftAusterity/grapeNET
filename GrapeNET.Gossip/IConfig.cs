@@ -33,6 +33,11 @@ namespace NetMud.Gossip
         string UserAgent { get; set; }
 
         /// <summary>
+        /// Version number for this game
+        /// </summary>
+        string Version { get; set; }
+
+        /// <summary>
         /// The maximum retry value
         /// </summary>
         double SuspendMultiplierMaximum { get; set; }

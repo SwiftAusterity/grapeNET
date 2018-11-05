@@ -142,6 +142,16 @@ namespace NetMud.Gossip
 
             switch (newReply.Event)
             {
+                case "restart":
+                    var downtime = newReply.Payload.downtime;
+
+                    MyClient.Close(CloseStatusCode.Normal);
+
+                    Task.Run(() => Task.Delay(Convert.ToInt32(1000 * downtime)))
+                        .ContinueWith((t) => ReconnectLoop());      
+
+                    ReconnectLoop();
+                    break;
                 case "heartbeat":
                     var whoBlock = new HeartbeatResponse()
                     {
@@ -342,11 +352,20 @@ namespace NetMud.Gossip
         /// <returns>the entity</returns>
         private TransportMessage DeSerialize(string jsonData)
         {
-            var serializer = SerializationUtility.GetSerializer();
+            try
+            {
+                var serializer = SerializationUtility.GetSerializer();
 
-            var reader = new StringReader(jsonData);
+                var reader = new StringReader(jsonData);
 
-            return serializer.Deserialize(reader, typeof(TransportMessage)) as TransportMessage;
+                return serializer.Deserialize(reader, typeof(TransportMessage)) as TransportMessage;
+            }
+            catch (Exception ex)
+            {
+                DoLog(ex);
+            }
+
+            return new TransportMessage() { Status = "failure" };
         }
 
         private void DoLog(string toLog)
